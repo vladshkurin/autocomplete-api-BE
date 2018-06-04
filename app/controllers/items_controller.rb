@@ -1,16 +1,8 @@
 class ItemsController < ApplicationController
-  def index
-    @items = Item.all
-    json_response(@items)
+  def autocomplete
+    title = params[:q] || nil
+    items = []
+    items = Item.where('title ILIKE ?', "%#{title}%").limit(5) if title
+    json_response(items)
   end
-
-  private
-
-  def item_params
-    params.permit(:title)
-  end
-
-  # def set_item
-  #   @item = Item.find_by(params[:id])
-  # end
 end
