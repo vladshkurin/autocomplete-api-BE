@@ -1,0 +1,23 @@
+development:
+  adapter: 'postgresql'
+  encoding: utf-8
+  host: 'localhost'
+  username:
+  password:
+  database: autocomplete-api_development
+
+test:
+  adapter: 'postgresql'
+  encoding: utf-8
+  host: 'localhost'
+  username:
+  password:
+  database: autocomplete-api_test
+
+production:
+  adapter: 'postgresql'
+  encoding: utf-8
+  host: 'localhost'
+  username:
+  password:
+  database: autocomplete-api_production
